@@ -54,6 +54,8 @@ def main():
         task_list = service.tasks().list(tasklist="MTY4MjkwOTYwNjkxMDE0MzA4MjU6MDow").execute()
         print(task_list)
         for item in task_list.get("items"):
+            # print(f"Title: {item.get('title')}")
+            # print(item.get("due"))
             print(item["title"])
             print(item["due"][:10])
             print()
